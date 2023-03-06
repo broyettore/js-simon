@@ -1,0 +1,86 @@
+/********** RESET **********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212339;
+    color: #86c252;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body-light-theme {
+    background-color: #ffffff;
+    color: #f5735e;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*************** COMMON *******************/
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/************* HEADER ************/
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    animation: headerFadeIn 1s linear forwards;
+}
+
+@keyframes headerFadeIn {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+header button {
+    border: 0;
+    background-color: transparent;
+}
+
+header button i {
+    color: #86c252;
+    font-size: 1.8rem;
+}
+
+
+/************* MAIN ************/
+
+main {
+    height: calc(100vh - 117px);
+}
+
+main > .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/************* FOOTER ************/
+
+footer > .container {
+    text-align: center;
+    padding: 10px;
+}
+
