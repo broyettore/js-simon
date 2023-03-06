@@ -69,4 +69,4 @@ mainBtn.addEventListener("click", () => {
     mainBtn.innerHTML = "When the numbers disappear, Write them below";
 })
 /********** TIMERS ********* */
-setTimeout(askNum, 16000);
+setTimeout(askNum, 30000);
