@@ -11,7 +11,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.body-light-theme {
+
+.body-light-theme {                                    /*****   <--- this class should stay after body for the theme switch to work ****/
     background-color: #ffffff;
     color: #f5735e;
 }
@@ -61,18 +62,100 @@ header button i {
     font-size: 1.8rem;
 }
 
+.fa-toggle-off {
+    color: #f5735e;
+}
+
 
 /************* MAIN ************/
 
 main {
-    height: calc(100vh - 117px);
+    height: calc(100vh - 137px);
 }
 
 main > .container {
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+main h2 {
+    margin-bottom: 20px;
+}
+
+
+.gen-btn {
+    border: 0;
+    background-color: transparent;
+    color: #86c252;
+    border-radius: 20px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.gen-btn:hover {
+    border: 2px solid #86c252;
+    transform: translateY(-6px);
+    padding: 8px 16px;
+    transition: ease-in-out .40s;
+}
+
+.gen-btn-light {
+    color: #f5735e;
+}
+
+.gen-btn-light:hover {
+    border: 2px solid #f5735e;
+}
+
+.input-ctn,
+.user-input-ctn {
+    display: flex;
+}
+
+.input {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    border: 1px solid #86c252;
+    cursor: pointer;
+    background-color: #86c252;
+    color: #212339;
+    font-weight: bold;
+    transition: background-color ease .40s;
+}
+
+.input:hover {
+    background-color: transparent;
+    color: #86c252;
+}
+
+.input:focus {
+    outline: 0;
+}
+
+.none {
+    animation: textFadeOut .10s linear forwards 6s;
+}
+
+@keyframes textFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.red {
+    background-color: crimson;
+    color: white;
 }
 
 
@@ -81,6 +164,9 @@ main > .container {
 
 footer > .container {
     text-align: center;
-    padding: 10px;
+}
+
+footer span {
+    padding: 20px;
 }
 
