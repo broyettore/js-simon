@@ -35,6 +35,7 @@ function numList () {
         randomNumList.push(numRand);
         showInput[i].innerHTML = randomNumList[i];
     }
+    return randomNumList
 }
 function changeText () {
     mainBtn.innerHTML = "Inserisci i numeri";
@@ -44,9 +45,10 @@ function askNum() {
     let userArray = [];
 
       for (let i = 0; i < 5; i++) {
-        userArray.push(showUserInput[i].value)
-
-          if (showInput[i].innerHTML.includes(userArray[i])) {
+        userArray.push(Number(showUserInput[i].value));
+        console.log(randomNumList)
+        
+        if (randomNumList.includes(userArray[i])) {
               alert("the number " + userArray[i] + " is right");
           } else {
             alert("the number " + userArray[i] + " is wrong");
